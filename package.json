@@ -1,0 +1,11 @@
+{
+  "name": "dfwmetro-mcp",
+  "version": "1.0.0",
+  "description": "Local stdio MCP server for dfwmetro.net — the DFW directory of genuinely online-bookable service businesses. Find verified local services and submit new listings from any MCP client.",
+  "type": "module",
+  "bin": { "dfwmetro-mcp": "server.mjs" },
+  "scripts": { "start": "node server.mjs" },
+  "engines": { "node": ">=18" },
+  "license": "MIT",
+  "keywords": ["mcp", "model-context-protocol", "dfw", "dallas", "fort-worth", "directory", "booking"]
+}
