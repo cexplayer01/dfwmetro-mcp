@@ -12,6 +12,25 @@ Give your AI agent three tools:
 | `find_verified_listings` | Strict search: VERIFIED businesses only — license, registration, and insurance checked by the dfwmetro verification desk. |
 | `submit_listing` | Submit a DFW business to the directory. It **must** be genuinely online-bookable (a real date/time scheduling flow — not a quote form, not phone-only). Accepted submissions start as `NOT_YET_VERIFIED` and pass human review. |
 
+## Install in Claude / Cursor (and other MCP clients)
+
+Two ways to connect — no auth, no API key either way:
+
+**Hosted endpoint** — if your client supports remote (Streamable HTTP)
+servers, connect it straight to:
+
+```
+https://dfwmetro.net/mcp
+```
+
+It is also listed in the official MCP Registry as
+`io.github.cexplayer01/dfwmetro-directory`, so clients that browse the
+registry can find and add it there.
+
+**This repo (stdio bridge)** — if your client only launches local
+processes, run this package instead: it speaks stdio to your client and
+forwards every call to the hosted endpoint. See **Quick start** below.
+
 ## Why this exists
 
 dfwmetro.net hosts the same tools as a stateless HTTP MCP endpoint at
